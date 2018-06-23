@@ -1,5 +1,6 @@
 package com.mavharsha.scratchPad;
 
+@SimpleTestAnnotation(message = "Adding a message")
 public class Student {
     private String gpa;
 
