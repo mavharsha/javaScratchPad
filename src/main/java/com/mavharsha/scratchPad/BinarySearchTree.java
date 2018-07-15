@@ -1,12 +1,20 @@
 package com.mavharsha.scratchPad;
 
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
+
 public class BinarySearchTree<T extends Comparable<T>> {
 
     private BinaryNode<T> root;
 
     public BinarySearchTree(T value) {
         root = new BinaryNode<T>(value);
+    }
+
+    public BinarySearchTree(BinaryNode<T> root) {
+        this.root = root;
     }
 
     public BinaryNode<T> getRoot() {
@@ -43,12 +51,24 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * TRAVERSALS
      * */
 
-    public void preOrderTraversal() {
-        preOrderTraversal(root);
+    public List<T> preOrderTraversal() {
+        return preOrderTraversal(root);
     }
 
-    private void preOrderTraversal(BinaryNode rootNode) {
-        throw new UnsupportedOperationException("UnSupported yet!");
+    private List<T> preOrderTraversal(BinaryNode rootNode) {
+        //throw new UnsupportedOperationException("UnSupported yet!");
+        List<T> listOfElements = new ArrayList<T>();
+        Stack<BinaryNode<T>> interimStack = new Stack<>();
+        interimStack.push(rootNode);
+
+        while(!interimStack.empty()){
+            BinaryNode<T> currentTop =  interimStack.pop();
+            listOfElements.add(currentTop.getValue());
+            if(currentTop.getRight()!=null) { interimStack.push(currentTop.getRight());}
+            if(currentTop.getLeft()!=null) { interimStack.push(currentTop.getLeft());}
+        }
+
+        return listOfElements;
     }
 
     public void postOrderTraversal() {
