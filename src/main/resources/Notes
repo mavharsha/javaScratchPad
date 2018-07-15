@@ -37,3 +37,19 @@ findNumbers(list, Numbers::isMoreThanFifty)
 
 Memory leaks happen when object references that are no longer needed are unnecessarily maintained.
 
+
+
+/* Concurrency */
+
+In concurrentHashMaps, operations are not atomic.
+
+In concurrentHashMaps,
+    reads are fast
+    writes require locks
+
+Locks are not applied on the whole map. Instead locks are applied on a granular level.
+It locks a segment instead of the whole map.
+
+
+
+
