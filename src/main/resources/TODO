@@ -1,0 +1,25 @@
+More Recursion
+    Factorial - Done
+    Fibonacci - Done
+    Sum of List(Reduce) - Done
+    Recursive StaircaseÅ
+    Tree traversal
+        pre
+        post
+        inorder
+        levelOrder
+    Flatten binary tree to linked list
+    Iterate over LinkedList
+
+
+Patterns
+    Factory
+    Abstract Factory
+    Observer
+    State
+    Command
+    Strategy
+    Singleton - Consider multithreading
+    Adapter
+    Decorator
+    Collection?
