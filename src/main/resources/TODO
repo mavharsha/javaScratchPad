@@ -10,7 +10,27 @@ More Recursion
         levelOrder
     Max Height of a binary tree - Done
     Flatten binary tree to linked list
-    Iterate over LinkedList
+    Iterate over LinkedList - Done
+    Crossword puzzle - HackerRank
+
+
+DS
+    LinkedList
+        Reverse
+        Reverse doubly linked list
+        Has circle?
+
+    Tree
+        Height of a BTree - Done
+        Lowest common ancestor in a Btree
+        Is a tree a BSearchtree
+
+
+Strings
+    Anagrams
+
+
+
 
 
 Patterns
