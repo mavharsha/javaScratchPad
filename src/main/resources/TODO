@@ -16,6 +16,7 @@ More Recursion
 Patterns
     Factory
     Abstract Factory
+    Builder
     Observer
     State
     Command
