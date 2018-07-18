@@ -88,8 +88,16 @@ public class LinkedList<T> {
     public void insertAtEnd(T value) {
         Node<T> next = new Node<T>(value);
         setNext(next);
+        next.setPrevious(current);
         setCurrent(next);
         COUNT++;
+    }
+
+    public void insertAtHead(T value) {
+        Node<T> previous = new Node<T>(value);
+        previous.setNext(head);
+        head.setPrevious(previous);
+        head = previous;
     }
 
     public int getCOUNT() {
