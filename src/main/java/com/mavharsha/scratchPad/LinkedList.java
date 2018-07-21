@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class LinkedList<T> {
+public class LinkedList<T extends Comparable> {
     private Node<T> head;
     private Node<T> current;
     private int COUNT;
@@ -98,6 +98,7 @@ public class LinkedList<T> {
         previous.setNext(head);
         head.setPrevious(previous);
         head = previous;
+        COUNT++;
     }
 
     public int getCOUNT() {
@@ -117,11 +118,62 @@ public class LinkedList<T> {
         return listOfElements;
     }
 
-    /*TODO
-    *   Insert at HEAD
-    *   Insert at END
-    *   Delete at HEAD
-    *   Delete at END
+    public boolean contains(T value) {
+        if(head == null) {
+            return false;
+        }
+        Node<T> tempHead = head;
+        while(tempHead!=null) {
+            if(tempHead.getValue().equals(value)){
+                return true;
+            }
+            tempHead = tempHead.getNext();
+        }
+        return false;
+    }
+
+    /* Current will always point to tail of the list */
+    public void deleteAtEnd() {
+        deleteNode(current);
+    }
+
+    public void deleteAtHead() {
+        deleteNode(getHead());
+    }
+
+    private void deleteNode(Node<T> node) {
+        Node<T> temporaryPrevious = node.getPrevious();
+        Node<T> temporaryNext = node.getNext();
+
+        // check if head
+        if(node ==  getHead()) {
+            if(temporaryNext != null) {
+                setHead(temporaryNext);
+            }
+            node = null;
+            COUNT--;
+        }
+        // check if tail
+        if(temporaryNext == null) {
+            node = null;
+            temporaryPrevious.setNext(null);
+            current = temporaryPrevious;
+            COUNT--;
+        }
+
+        // middle node
+        if(temporaryPrevious !=  null && temporaryNext != null) {
+            node = null;
+            temporaryPrevious.setNext(temporaryNext);
+            COUNT--;
+        }
+    }
+
+    /*  TODO
+    *   Insert at HEAD - DONE
+    *   Insert at END - DONE
+    *   Delete at HEAD - DONE
+    *   Delete at END - DONE
     *   Insert at nth place
     *   Delete at nth place
     *   IsCircular - tortise hare algorithm

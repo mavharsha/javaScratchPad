@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class IterateRecusiveLinkedList<T> {
+public class IterateRecusiveLinkedList<T extends Comparable> {
 
     public List iterate(LinkedList<T> linkedList) {
         return iterate(linkedList.getHead(), new ArrayList());
