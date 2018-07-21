@@ -13,6 +13,7 @@ More Recursion
     Flatten binary tree to linked list
     Iterate over LinkedList - Done
     Crossword puzzle - HackerRank
+    Squareroot Recursive
 
 
 DS
@@ -46,3 +47,7 @@ Patterns
     Adapter
     Decorator
     Collection?
+    
+    
+Other
+    Bean validation - [Java Bean Validation Basics](http://www.baeldung.com/javax-validation)
