@@ -1,9 +1,7 @@
 package com.mavharsha.scratchPad;
 
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class BinarySearchTree<T extends Comparable<T>> {
 
@@ -56,7 +54,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     private List<T> preOrderTraversal(BinaryNode rootNode) {
-        //throw new UnsupportedOperationException("UnSupported yet!");
         List<T> listOfElements = new ArrayList<T>();
         Stack<BinaryNode<T>> interimStack = new Stack<>();
         interimStack.push(rootNode);
@@ -87,11 +84,30 @@ public class BinarySearchTree<T extends Comparable<T>> {
         throw new UnsupportedOperationException("UnSupported yet!");
     }
 
-    public void levelOrderTraversal() {
-        inOrderTraversal(root);
+    public List<T> levelOrderTraversal() {
+        return levelOrderTraversal(root);
     }
 
-    private void levelOrderTraversal(BinaryNode rootNode) {
-        throw new UnsupportedOperationException("UnSupported yet!");
+    private List<T> levelOrderTraversal(BinaryNode rootNode) {
+        List<T> listOfElements = new ArrayList<T>();
+
+        if(rootNode == null) {
+            return listOfElements;
+        }
+        ArrayDeque<BinaryNode<T>> interimQueue = new ArrayDeque<>();
+        interimQueue.add(rootNode);
+
+        while(!interimQueue.isEmpty()){
+            BinaryNode<T> current = interimQueue.removeFirst();
+            listOfElements.add(current.getValue());
+
+            if(current.getLeft() != null) {
+                interimQueue.add(current.getLeft());
+            }
+            if(current.getRight() != null) {
+                interimQueue.add(current.getRight());
+            }
+        }
+        return listOfElements;
     }
 }

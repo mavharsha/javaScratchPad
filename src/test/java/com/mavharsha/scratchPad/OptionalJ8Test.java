@@ -70,14 +70,14 @@ public class OptionalJ8Test {
     public void testOptionalWithDefaultValueWithOrElseGet() {
         String string = null;
         String value = Optional.ofNullable(string).orElseGet(() -> "hello world!");
-        assertTrue(value.equalsIgnoreCase("Hello World"));
+        assertTrue(value.equalsIgnoreCase("Hello World!"));
     }
 
 
     @Test(expected = IllegalArgumentException.class)
     public void testAnExceptionWhenTheOptionalPassedIsNull() {
         String string = null;
-        String value = Optional.ofNullable(string).orElseThrow(() -> {throw new IllegalArgumentException();});
+        String value = Optional.ofNullable(string).orElseThrow(IllegalArgumentException::new);
     }
 
 

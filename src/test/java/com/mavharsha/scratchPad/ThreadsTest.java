@@ -22,7 +22,7 @@ public class ThreadsTest {
        Thread simpleThread = new SimpleThread();
         System.out.println(simpleThread.getState());
        simpleThread.start();
-       simpleThread.wait();
+       //simpleThread.wait();
        //simpleThread.notify();
     }
 }
