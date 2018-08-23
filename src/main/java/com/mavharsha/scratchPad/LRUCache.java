@@ -27,8 +27,18 @@ public class LRUCache<K, V> {
         }
 
         if(cache.size() >= capacity) {
-            // remove the last element
+            cache.remove(cache.entrySet().iterator().next().getKey());
         }
         cache.put(key, value);
+    }
+
+    public int numberOfKeys(){
+        return cache.size();
+    }
+    @Override
+    public String toString() {
+        return "LRUCache{" +
+                "cache=" + cache +
+                '}';
     }
 }
