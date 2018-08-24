@@ -2,7 +2,16 @@ package com.mavharsha.scratchPad;
 
 
 import java.util.*;
-
+/*
+*
+* BinarySearchTree
+* Traversal
+*   InOrder
+*   PreOrder
+*   PostOrder
+*   LevelOrder
+*
+* */
 public class BinarySearchTree<T extends Comparable<T>> {
 
     private BinaryNode<T> root;
