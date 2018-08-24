@@ -1,7 +1,5 @@
 package com.mavharsha.scratchPad;
 
-import com.sun.source.tree.BinaryTree;
-
 public class RecursivelyInvertBTree {
 
     public static void invert(BinaryNode root) {
