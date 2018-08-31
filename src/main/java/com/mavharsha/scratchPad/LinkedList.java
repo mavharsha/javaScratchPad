@@ -102,7 +102,13 @@ public class LinkedList<T extends Comparable> {
     }
 
     public int getCOUNT() {
-        return COUNT;
+        Node<T> tempHead = head;
+        int temporaryCount = 0;
+        while(tempHead != null) {
+            temporaryCount++;
+            tempHead = tempHead.getNext();
+        }
+        return temporaryCount;
     }
 
     public List<T> traverse() {
