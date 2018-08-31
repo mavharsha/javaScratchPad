@@ -1,11 +1,11 @@
 package com.mavharsha.scratchPad;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.regex.Pattern;
 
 import static org.junit.Assert.*;
 
@@ -88,5 +88,33 @@ public class OptionalJ8Test {
 
         int size = optionalStrings.map(List::size).orElse(0);
         assertTrue(names.size() == size);
+    }
+
+
+
+    @Test
+    public void testOptionalOfObject() {
+        User user = new User("username", "password");
+        Optional<String> password = Optional.ofNullable(user.getPassword());
+        Pattern.compile(".*[A-Z].*").matcher(password.get()).matches();
+    }
+
+
+    private class User{
+        private String username;
+        private String password;
+
+        public User(String username, String password) {
+            this.username = username;
+            this.password = password;
+        }
+
+        public String getUsername() {
+            return username;
+        }
+
+        public String getPassword() {
+            return password;
+        }
     }
 }
