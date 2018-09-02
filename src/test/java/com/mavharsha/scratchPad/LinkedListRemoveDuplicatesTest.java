@@ -25,14 +25,21 @@ public class LinkedListRemoveDuplicatesTest {
 
     @After
     public void tearDown() throws Exception {
-
+        linkedList = null;
     }
 
 
     @Test
-    public void removeDuplicates() {
+    public void removeDuplicatesUsingHashSet() {
         assertEquals("Assert Length of the linked list",linkedList.getCOUNT(), 10);
         LinkedList<String> deDupedList = LinkedListRemoveDuplicates.removeDuplicates(linkedList);
         assertEquals("Assert Length of the linked list after deleting duplicates", deDupedList.getCOUNT(), 8);
+    }
+
+    @Test
+    public void removeDuplicatesWithoutAuxMemory() {
+        assertEquals("Assert Length of the linked list",linkedList.getCOUNT(), 10);
+        LinkedListRemoveDuplicates.removeDuplicatesNoAuxMemory(linkedList);
+        assertEquals("Assert Length of the linked list after deleting duplicates", linkedList.getCOUNT(), 8);
     }
 }

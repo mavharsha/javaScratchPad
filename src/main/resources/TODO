@@ -22,6 +22,8 @@ DS
         Reverse
         Reverse doubly linked list
         Has circle?
+        Kth element from last (Recursion)
+        Delete middle node
 
     Tree
         Height of a BTree - Done

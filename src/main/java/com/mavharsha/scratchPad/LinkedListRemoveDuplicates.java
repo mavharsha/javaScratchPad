@@ -34,4 +34,27 @@ public class LinkedListRemoveDuplicates {
         return list;
     }
 
+
+    /*
+    *
+    * Remove duplicates in linked list, without using extra memory(no hashset)
+    * */
+    public static <T extends Comparable> void removeDuplicatesNoAuxMemory(LinkedList<T> list){
+        Node<T> head = list.getHead();
+
+        while(head != null) {
+            Node<T> current = head;
+
+            while(current != null) {
+
+                if(current.getNext() != null && head.getValue() == current.getNext().getValue()) {
+                    current.setNext(current.getNext().getNext());
+                } else {
+                    current = current.getNext();
+                }
+            }
+            head = head.getNext();
+        }
+    }
+
 }
