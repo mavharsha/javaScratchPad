@@ -25,7 +25,7 @@ public class DeleteKthElementFromLastTest {
     public void testDeleteKthfromLast() {
         assertEquals(listOfStrings.getCOUNT(), 8);
         System.out.println(listOfStrings.traverse());
-//        Node<String> returnedNode = DeleteKthElementFromLast.lastKthElement(listOfStrings, 1);
-//        assertEquals(returnedNode.getValue(), "h");
+        Node<String> returnedNode = DeleteKthElementFromLast.lastKthElement(listOfStrings, 1);
+        assertEquals(returnedNode.getValue(), "h");
     }
 }
