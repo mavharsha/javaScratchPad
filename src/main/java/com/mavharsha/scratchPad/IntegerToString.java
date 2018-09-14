@@ -83,10 +83,10 @@ public class IntegerToString {
 
         StringBuilder builder = new StringBuilder();
 
-        if(extra >= 100) {
-            int hundreds = extra / 100;
+        if(extra >= HUNDRED) {
+            int hundreds = extra / HUNDRED;
             builder.append(" " + integerStringMap.get(hundreds) + " hundred");
-            extra = extra % 100;
+            extra = extra % HUNDRED;
         }
 
         if(extra > 0) {
