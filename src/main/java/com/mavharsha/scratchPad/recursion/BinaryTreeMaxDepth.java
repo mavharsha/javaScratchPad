@@ -18,7 +18,7 @@ public class BinaryTreeMaxDepth {
     }
 
     private void validateInput(BinaryNode rootNode) {
-        if(rootNode == null) {
+        if (rootNode == null) {
             throw new IllegalArgumentException("GrootNode cannot be null");
         }
     }
