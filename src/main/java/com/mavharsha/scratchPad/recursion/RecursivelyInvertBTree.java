@@ -1,4 +1,6 @@
-package com.mavharsha.scratchPad;
+package com.mavharsha.scratchPad.recursion;
+
+import com.mavharsha.scratchPad.BinaryNode;
 
 public class RecursivelyInvertBTree {
 

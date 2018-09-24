@@ -1,5 +1,6 @@
 package com.mavharsha.scratchPad;
 
+import com.mavharsha.scratchPad.recursion.BinaryTreeMaxDepth;
 import org.junit.Before;
 import org.junit.Test;
 

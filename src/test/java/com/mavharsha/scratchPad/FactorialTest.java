@@ -1,5 +1,6 @@
 package com.mavharsha.scratchPad;
 
+import com.mavharsha.scratchPad.recursion.Factorial;
 import org.junit.Before;
 import org.junit.Test;
 

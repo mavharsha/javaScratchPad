@@ -1,4 +1,4 @@
-package com.mavharsha.scratchPad;
+package com.mavharsha.scratchPad.recursion;
 
 public class SubsetSum {
 
@@ -17,21 +17,19 @@ public class SubsetSum {
             return true;
         }
 
-        // if we have
         if(sum < 0) {
             return false;
         }
 
-        // if the we have reached to start of the array and the sum is not zero, lost cause.
-        // Return false.
+        // if the we have reached to start of the array and the sum is not zero, lost cause. Return false.
         if(length == 0 && sum != 0) {
             return false;
         }
 
         // if the current element is greater than sum, ignore it.
-//        if(set[length - 1] > sum) {
-//            return recursiveFunction(set, sum, length -1);
-//        }
+        if(set[length - 1] > sum) {
+            return recursiveFunction(set, sum, length -1);
+        }
 
         // consider a subset with current element and also a subset without current subset.
         return recursiveFunction(set, sum - set[length - 1], length - 1) ||

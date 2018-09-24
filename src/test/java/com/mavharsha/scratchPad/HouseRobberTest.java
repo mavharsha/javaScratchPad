@@ -1,6 +1,6 @@
 package com.mavharsha.scratchPad;
 
-import com.mavharsha.scratchPad.HouseRobber;
+import com.mavharsha.scratchPad.recursion.HouseRobber;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

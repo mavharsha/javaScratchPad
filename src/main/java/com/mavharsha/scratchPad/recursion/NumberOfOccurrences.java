@@ -1,4 +1,4 @@
-package com.mavharsha.scratchPad;
+package com.mavharsha.scratchPad.recursion;
 
 public class NumberOfOccurrences {
 

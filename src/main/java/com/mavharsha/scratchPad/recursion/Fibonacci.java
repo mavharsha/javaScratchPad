@@ -1,4 +1,4 @@
-package com.mavharsha.scratchPad;
+package com.mavharsha.scratchPad.recursion;
 
 import java.util.HashMap;
 import java.util.Map;
