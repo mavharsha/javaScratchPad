@@ -1,4 +1,6 @@
-package com.mavharsha.scratchPad.recursion;/*
+package com.mavharsha.scratchPad.recursion;
+
+/*
  * You are a professional robber planning to rob houses along a street. Each house has a
  * certain amount of money stashed, the only constraint stopping you from robbing each of
  * them is that adjacent houses have security system connected and it will automatically
@@ -13,10 +15,11 @@ public class HouseRobber {
 
     public static int rob(int[] nums) {
         validate(nums);
-        return helper(nums, nums.length, 0);
+        int[] store = new int[nums.length];
+        return helper(nums, nums.length, store, 0);
     }
 
-    private static int helper(int[] nums, int numberOfHouses, int currentHouse) {
+    private static int helper(int[] nums, int numberOfHouses, int[] store, int currentHouse) {
         if (numberOfHouses == 0) {
             return 0;
         } else if (numberOfHouses == 1) {
@@ -32,8 +35,8 @@ public class HouseRobber {
             return nums[currentHouse];
         }
 
-        int ifSelected = nums[currentHouse] + helper(nums, numberOfHouses, currentHouse + 2);
-        int ifNotSelected = helper(nums, numberOfHouses, currentHouse + 1);
+        int ifSelected = nums[currentHouse] + helper(nums, numberOfHouses, store, currentHouse + 2);
+        int ifNotSelected = helper(nums, numberOfHouses, store, currentHouse + 1);
         return Math.max(ifSelected, ifNotSelected);
     }
 
