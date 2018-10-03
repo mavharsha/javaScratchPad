@@ -1,4 +1,4 @@
-####Traversal/Tree walks
+# Traversal/Tree walks
     
 Traversal is a way of visiting all the nodes in a tree in a specified order.
     
@@ -12,7 +12,7 @@ Traversal is a way of visiting all the nodes in a tree in a specified order.
     we process the left child first, then the root and then the right child
     
     
-######Example of pre order -- Book or a Research paper.
+###### Example of pre order -- Book or a Research paper.
       Title
       Abstract
       Chapter 1
@@ -31,7 +31,7 @@ Iteratively:
             preOrder(c)
  ```
         
-######Example of postOrder -- File System
+###### Example of postOrder -- File System
       rootDir
           dir1
               file1
