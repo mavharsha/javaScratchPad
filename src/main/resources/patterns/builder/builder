@@ -1,0 +1,12 @@
+Item 2: Consider builder pattern when faced with many constructor parameters.
+
+
+Alternatives for builder which are not good enough:
+    *   Telescoping constructor -- doesn't scale well as when number of parameters increase, number of constructors increase.
+    *   JavaBeans pattern -- use default constructor, and set state with setters allows inconsistency and precludes the class from being immutable.
+
+
+Builder pattern, instead creating the object directly, the client calls the constructor (or static factory) with all the
+required required parameters to get the builder object. Then the client calls the setter like methods on the builder object
+to set each optional parameter of interest. Finally, the client calls a parameter-less build method to generate the object,
+which is typically immutable. The Builder is typically a static member class of the class it builds.
